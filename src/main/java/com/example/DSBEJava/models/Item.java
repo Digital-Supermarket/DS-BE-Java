@@ -1,4 +1,4 @@
-package com.example.DSBEJava.model;
+package com.example.DSBEJava.models;
 public class Item{
     int Id;
     Product product;

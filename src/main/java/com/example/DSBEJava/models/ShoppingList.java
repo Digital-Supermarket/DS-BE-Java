@@ -1,4 +1,4 @@
-package com.example.DSBEJava.model;
+package com.example.DSBEJava.models;
 import java.util.*;
 
 public class ShoppingList{
