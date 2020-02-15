@@ -4,6 +4,20 @@ public class Item{
     Product product;
     String expiryDate;
 
+
+    public Item(){
+        this.id = 00000;
+        this.product = null;
+        this.expiryDate = "";
+    }
+
+    public Item(int id, Product product, String expiryDate){
+        this.id = id;
+        this.product = product;
+        this.expiryDate = expiryDate;
+    }
+
+
     public int getId() {
         return this.id;
     }
@@ -29,17 +43,6 @@ public class Item{
     }
 
 
-    public Item(){
-        this.id = 00000;
-        this.product = null;
-        this.expiryDate = "";
-    }
-
-    public Item(int id, Product product, String expiryDate){
-        this.id = id;
-        this.product = product;
-        this.expiryDate = expiryDate;
-    }
 
 }
 
