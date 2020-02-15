@@ -1,15 +1,15 @@
 package com.example.DSBEJava.models;
 public class Item{
-    int Id;
+    int id;
     Product product;
     String expiryDate;
 
     public int getId() {
-        return this.Id;
+        return this.id;
     }
 
-    public void setId(int Id) {
-        this.Id = Id;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Product getProduct() {
@@ -25,6 +25,19 @@ public class Item{
     }
 
     public void setExpiryDate(String expiryDate) {
+        this.expiryDate = expiryDate;
+    }
+
+
+    public Item(){
+        this.id = 00000;
+        this.product = null;
+        this.expiryDate = "";
+    }
+
+    public Item(int id, Product product, String expiryDate){
+        this.id = id;
+        this.product = product;
         this.expiryDate = expiryDate;
     }
 
