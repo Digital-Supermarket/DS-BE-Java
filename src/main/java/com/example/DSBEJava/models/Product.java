@@ -1,6 +1,6 @@
 package com.example.DSBEJava.models;
 public class Product{
-    int id;
+    int productId;
     String name;
     double price;
     double weight;
@@ -9,7 +9,7 @@ public class Product{
 
 
     public Product(){
-        this.id = 000;
+        this.productId = 000;
         this.name = "";
         this.price = 0.00;
         this.weight = 0.0;
@@ -18,7 +18,7 @@ public class Product{
     }
 
     public Product(int id, String name , double price, double weight, String code, String size){
-        this.id = id;
+        this.productId = id;
         this.name =name;
         this.price = price;
         this.weight = weight;
@@ -27,11 +27,11 @@ public class Product{
     }
 
     public int getId() {
-        return this.id;
+        return this.productId;
     }
 
     public void setId(final int id) {
-        this.id = id;
+        this.productId = id;
     }
 
     public String getName() {

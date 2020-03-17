@@ -1,29 +1,29 @@
 package com.example.DSBEJava.models;
 public class Item{
-    int id;
+    int itemId;
     Product product;
     String expiryDate;
 
 
     public Item(){
-        this.id = 00000;
+        this.itemId = 00000;
         this.product = null;
         this.expiryDate = "";
     }
 
     public Item(int id, Product product, String expiryDate){
-        this.id = id;
+        this.itemId = id;
         this.product = product;
         this.expiryDate = expiryDate;
     }
 
 
     public int getId() {
-        return this.id;
+        return this.itemId;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.itemId = id;
     }
 
     public Product getProduct() {

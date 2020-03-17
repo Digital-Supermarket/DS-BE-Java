@@ -1,5 +1,4 @@
 package com.example.DSBEJava.Controllers;
-
 import java.util.*;
 import com.example.DSBEJava.models.*;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -15,9 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class APIsController {
     
 
-//////////////////User APIs
+//////////////////Client APIs
 
-    List<User> users = new ArrayList<User>();
+    List<Client> clients = new ArrayList<Client>();
 
 
     @GetMapping("/hello/{name}")
@@ -25,40 +24,40 @@ public String sayHelloToName(@PathVariable("name") final String name) {
     return "Hello " + name + "this is a test";
 }
 
-    @GetMapping("/User")
-public List<User> findAllUsers() {
-    return users;
+    @GetMapping("/Client")
+public List<Client> findAllClients() {
+    return clients;
 }
 
-    @GetMapping("/User/{id}")
-public User findUser(@PathVariable("id") final int id) {
-    final User returnedUser = findUserById(id);
+    @GetMapping("/Client/{id}")
+public Client findClient(@PathVariable("id") final int id) {
+    final Client returnedUser = findClientById(id);
     return returnedUser;
 }
 
-    @PostMapping("/User")
-public User createUser(@RequestBody User newUser) {
-    this.users.add(newUser);
-    return newUser;
+    @PostMapping("/Client")
+public Client createClient(@RequestBody Client newClient) {
+    this.clients.add(newClient);
+    return newClient;
 }
 
-    @DeleteMapping("/User")
-public User deleteUser(@RequestBody User deletedUser) {
-    this.users.remove(deletedUser);
-    return deletedUser;
+    @DeleteMapping("/Client")
+public Client deleteClient(@RequestBody Client deletedClient) {
+    this.clients.remove(deletedClient);
+    return deletedClient;
 }
 
 
-// Helper methods for User
-public User findUserById(final int id) {
-    User returnedUser = null;
+// Helper methods for Client
+public Client findClientById(final int id) {
+    Client returnedClient = null;
 
-    for (final User u : this.users) {
+    for (final Client u : this.clients) {
         if(u.getId() == id){
-            returnedUser = u;
+            returnedClient = u;
         }
     }
-    return returnedUser;
+    return returnedClient;
 }
 
 ////////////////////Item APIs

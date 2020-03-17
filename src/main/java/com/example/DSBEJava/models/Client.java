@@ -1,27 +1,31 @@
 package com.example.DSBEJava.models;
-public class User{
-    int Id;
+import java.util.*;
+public class Client{
+    int clientId;
     String name;
     String phone;
     String email;
     String password;
+    ArrayList<ShoppingList> shoppingLists;
 
-    public User(){
-        this.Id = 0;
+    public Client(){
+        this.clientId = 0;
         this.name = "";
         this.phone = "";
         this.email = "";
         this.password = "";
+        this.shoppingLists = null;
     }
-    public User(int id , String name , String phone , String email , String password){
-        this.Id = id;
+    public Client(int id , String name , String phone , String email , String password, ArrayList<ShoppingList> shoppingList){
+        this.clientId = id;
         this.name = name;
         this.phone = phone;
         this.email = email;
         this.password = password;
+        this.shoppingLists = shoppingList;
     }
-    public User(String name){
-        this.Id = 0;
+    public Client(String name){
+        this.clientId = 0;
         this.name = name;
         this.phone = "";
         this.email = "";
@@ -29,11 +33,11 @@ public class User{
     }
 
     public int getId() {
-        return this.Id;
+        return this.clientId;
     }
 
     public void setId(int Id) {
-        this.Id = Id;
+        this.clientId = Id;
     }
 
     public String getName() {
@@ -66,6 +70,15 @@ public class User{
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+
+    public ArrayList<ShoppingList> getShoppingList(){
+        return this.shoppingLists;
+    }
+
+    public void setShoppingList(ArrayList<ShoppingList>shoppingList){
+        this.shoppingLists = shoppingList;
     }
 
 }

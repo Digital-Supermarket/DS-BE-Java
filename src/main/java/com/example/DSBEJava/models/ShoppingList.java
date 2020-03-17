@@ -2,25 +2,25 @@ package com.example.DSBEJava.models;
 import java.util.*;
 
 public class ShoppingList{
-    int id;
+    int shoppingListId;
     ArrayList<Item> items;
 
     public ShoppingList(){
-        this.id = 000;
+        this.shoppingListId = 000;
         this.items = null;
     }
 
     public ShoppingList(int id, ArrayList<Item> items){
-        this.id = id;
+        this.shoppingListId = id;
         this.items = items;
     }
 
     public int getId() {
-        return this.id;
+        return this.shoppingListId;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.shoppingListId = id;
     }
 
     public ArrayList<Item> getItems() {
